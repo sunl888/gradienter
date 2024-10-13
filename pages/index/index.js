@@ -10,7 +10,7 @@ Page({
     zValue: '0.00',   // 加速度传感器Z轴的初始值，默认0.00
     isMonitoring: false // 控制是否监听的状态，默认不监听
   },
-   
+
   // 切换监听状态
   toggleMonitoring() {
     if (this.data.isMonitoring) {
@@ -45,9 +45,9 @@ Page({
         bubbleX: bubbleX,  // 更新小球X位置
         bubbleY: bubbleY,  // 更新小球Y位置
         bubbleColor: bubbleColor,  // 更新小球颜色
-        xValue: res.x.toFixed(4),  // 显示加速度传感器X轴值
-        yValue: res.y.toFixed(4),  // 显示加速度传感器Y轴值
-        zValue: res.z.toFixed(4)   // 显示加速度传感器Z轴值
+        xValue: res.x.toFixed(3),  // 显示加速度传感器X轴值
+        yValue: res.y.toFixed(3),  // 显示加速度传感器Y轴值
+        zValue: res.z.toFixed(3)   // 显示加速度传感器Z轴值
       });
     });
   },

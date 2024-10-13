@@ -1,6 +1,6 @@
 {
   "description": "项目私有配置文件。",
-  "projectname": "水平仪",
+  "projectname": "gradienter",
   "setting": {
     "compileHotReLoad": true
   }
