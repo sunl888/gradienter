@@ -1,0 +1,103 @@
+/* 页面背景设为浅灰色 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.title {
+  font-size: 22px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.separator {
+  height: 1px;
+  background-color: #ddd;
+  width: 80%;
+  margin: 10px 0;
+}
+
+.sub-title {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* 白色无边框大圆，阳刻效果 */
+.level-container {
+  width: 300px;  /* 大圆的宽度 */
+  height: 300px; /* 大圆的高度 */
+  background-color: #ffffff;
+  border-radius: 150px;
+  position: relative;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1); /* 阳刻效果（外凸） */
+}
+
+/* 小球，默认颜色为红色 */
+.bubble {
+  width: 20px; /* 小球缩小为20px */
+  height: 20px;
+  background-color: red; /* 默认红色 */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s cubic-bezier(0.4, 0.2, 0.3, 1); /* 平滑的运动效果 */
+}
+
+/* 坐标线的样式 */
+.crosshair {
+  position: absolute;
+  background-color: #888;
+}
+
+.horizontal {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.vertical {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+/* 坐标显示 */
+.coordinates {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: 20px;
+}
+
+.coordinates text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* 按钮样式 */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;  /* 增加按钮所在容器的宽度 */
+  margin-top: 20px;
+}
+
+button {
+  width: 160px;  /* 调整按钮的宽度为160px，确保四个字显示在一行 */
+  height: 40px;
+  font-size: 16px;
+  text-align: center;  /* 确保文本居中显示 */
+  white-space: nowrap;  /* 防止文字换行 */
+}

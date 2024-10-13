@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="title">onAccelerometerChange</view>
+  <view class="separator"></view>
+  <view class="sub-title">倾斜手机即可移动下方小球</view>
+
+  <view class="level-container">
+    <!-- 十字坐标线 -->
+    <view class="crosshair horizontal"></view>
+    <view class="crosshair vertical"></view>
+    
+    <!-- 小球，颜色根据距离动态变化 -->
+    <view class="bubble" style="transform: translate({{bubbleX}}px, {{bubbleY}}px); background-color: {{bubbleColor}};"></view>
+  </view>
+
+  <view class="coordinates">
+    <text>X: {{xAngle}}</text>
+    <text>Y: {{yAngle}}</text>
+    <text>Z: {{zAngle}}</text>
+  </view>
+
+  <view class="buttons">
+    <button type="primary" bindtap="startMonitoring">开始监听</button>
+    <button bindtap="stopMonitoring">停止监听</button>
+  </view>
+</view>
