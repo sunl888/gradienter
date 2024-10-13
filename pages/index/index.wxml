@@ -1,25 +1,22 @@
 <view class="container">
-  <view class="title">onAccelerometerChange</view>
-  <view class="separator"></view>
-  <view class="sub-title">倾斜手机即可移动下方小球</view>
-
   <view class="level-container">
     <!-- 十字坐标线 -->
     <view class="crosshair horizontal"></view>
     <view class="crosshair vertical"></view>
-    
-    <!-- 小球，颜色根据距离动态变化 -->
-    <view class="bubble" style="transform: translate({{bubbleX}}px, {{bubbleY}}px); background-color: {{bubbleColor}};"></view>
+
+    <!-- 小球，颜色根据距离动态变化  小球首先基于 translate(-50%, -50%) 居中对齐。
+然后根据 bubbleX 和 bubbleY 的数值，在原始中心的基础上进行相对位移。 -->
+    <view class="bubble" style="transform: translate(calc(-50% + {{bubbleX}}px), calc(-50% + {{bubbleY}}px)); background-color: {{bubbleColor}};"></view>
+
   </view>
 
   <view class="coordinates">
-    <text>X: {{xAngle}}</text>
-    <text>Y: {{yAngle}}</text>
-    <text>Z: {{zAngle}}</text>
+    <text>X: {{xValue}}</text>
+    <text>Y: {{yValue}}</text>
+    <text>Z: {{zValue}}</text>
   </view>
 
   <view class="buttons">
-    <button type="primary" bindtap="startMonitoring">开始监听</button>
-    <button bindtap="stopMonitoring">停止监听</button>
+    <button type="primary" bindtap="toggleMonitoring">{{isMonitoring ? '停止' : '开始'}}</button>
   </view>
 </view>
